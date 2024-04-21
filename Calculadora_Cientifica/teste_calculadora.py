@@ -6,14 +6,14 @@ class Teste_Calculadora_cientifica(unittest.TestCase):
         self.calc = Calculadora_cientifica()
 
     def test_validar(self):
-        self.assertIsNone(self.calc.validar(1,8))
-        self.assertIsNone(self.calc.validar(0))
-        self.assertIsNone(self.calc.validar(4))
-        self.assertIsNone(self.calc.validar(6,10))
+        self.assertTrue(self.calc._validar(1,8))
+        self.assertTrue(self.calc._validar(0))
+        self.assertTrue(self.calc._validar(4))
+        self.assertTrue(self.calc._validar(6,10))
         with self.assertRaises(TypeError):
-            self.calc.validar("x","y")
-            self.calc.validar(4,"y")
-            self.calc.validar("x",4)
+            self.calc._validar("x","y")
+            self.calc._validar(4,"y")
+            self.calc._validar("x",4)
 
     def test_soma(self):
         self.assertEqual(self.calc.soma(20,13), 33)
