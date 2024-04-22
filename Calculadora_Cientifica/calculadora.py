@@ -4,6 +4,7 @@ class Calculadora_cientifica:
     def __init__(self) -> None:
         self.ultimo_resultado = None
 
+
     def _validar(self,x,y = 0):
         if (type(x) == int or type(x) == float) and (type(y) == int or type(y) == float):
             return True
@@ -73,3 +74,9 @@ class Calculadora_cientifica:
     
     def __str__(self):
         return f"\n\nOla essa é uma Calculadora Científica e com base na sua ultima operação seu resultado é: {self.ultimo_resultado}\n\n"
+    
+
+
+i =  Calculadora_cientifica()
+print(i.tangente(90.5))
+print(i)
